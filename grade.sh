@@ -11,7 +11,8 @@ echo 'Finished cloning'
 
 # Step 2 - Check that student's code contains ListExamples.java
 
-if [[ -f student-submission/ListExamples.java ]] then 
+if [[ -f student-submission/ListExamples.java ]] 
+then 
     echo "ListExamples.java exists"
 else 
     echo "ListExamples.java does not exist"
@@ -27,7 +28,8 @@ cp -r lib grading-area
 cd grading-area
 javac -cp $CPATH ListExamples.java TestListExamples.java 
 
-if [[ $? == 0 ]] then
+if [[ $? == 0 ]] 
+then
     echo "Compilation was successful"
 else 
     echo "Compilation was not sucessful"
